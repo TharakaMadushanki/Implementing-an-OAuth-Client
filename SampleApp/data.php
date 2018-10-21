@@ -145,7 +145,7 @@ document.getElementById("content").style.visibility='visible';
 
  
 </head>
-<body>
+	<body>
 		<div class="profile" align="center" color="white">
 			<h1>Tharaka's Profile Info</h1>
 		</div>
@@ -157,7 +157,6 @@ document.getElementById("content").style.visibility='visible';
 		<div class="footer">
 			<p>Implementing OAuth Client |  Tharaka Liyanage  |  IT13015886</p>
 		</div>
-
     
     </body>
 </html>

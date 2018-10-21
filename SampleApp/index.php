@@ -48,8 +48,7 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => 'v2.9',
   ]);
 $helper = $fb->getRedirectLoginHelper();
-//$permissions = ['email']; // optional
-//$permissions = ['friendlist'];
+
 $permissions =  array("email","user_friends");	
 try {
 	if (isset($_SESSION['facebook_access_token'])) {
@@ -82,12 +81,9 @@ if (isset($accessToken)) {
 		$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 	}
 	// redirect the user back to the same page if it has "code" GET variable
-	if (isset($_GET['code'])) {
-		
+	if (isset($_GET['code'])) {		
 		header('Location: ./');
-	}
-	//header('Location: http://localhost/fb/data.php');
-
+	}	
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
 	$loginUrl = $helper->getLoginUrl('http://localhost/SampleApp/index.php', $permissions);
